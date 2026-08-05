@@ -1,5 +1,5 @@
 class Gym:
-    def __init__(self, gym_id, name, address, phone, opening_time, closing_time):
+    def __init__(self, gym_id: str, name: str, address: str, phone: str, opening_time: str, closing_time: str):
         self.gym_id = gym_id
         self.name = name
         self.address = address

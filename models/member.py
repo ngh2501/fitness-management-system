@@ -1,5 +1,12 @@
 class Member:
-    def __init__(self, member_id: str, full_name: str, gender: str, phone: str, email: str, membership_type: str, status: str = "Active"):
+    def __init__(self,
+                 member_id: str,
+                 full_name: str,
+                 gender: str,
+                 phone: str,
+                 email: str,
+                 membership_type: str,
+                 status: str):
         self.member_id = member_id
         self.full_name = full_name
         self.gender = gender
