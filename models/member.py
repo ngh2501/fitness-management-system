@@ -16,4 +16,9 @@ class Member:
         self.status = status
 
     def __str__(self):
-        return f"Member: {self.full_name}"
+        return (
+            f"[{self.member_id}] "
+            f"{self.full_name} | "
+            f"{self.membership_type} | "
+            f"{self.status}"
+        )
