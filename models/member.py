@@ -6,7 +6,7 @@ class Member:
                  phone: str,
                  email: str,
                  membership_type: str,
-                 status: str):
+                 status: str = "Active"):
         self.member_id = member_id
         self.full_name = full_name
         self.gender = gender

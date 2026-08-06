@@ -10,7 +10,7 @@ class Coach:
                  certification: str,
                  price: int,
                  availability: str,
-                 status: str = "Active"):
+                 status: str):
         self.coach_id = coach_id
         self.full_name = full_name
         self.gender = gender

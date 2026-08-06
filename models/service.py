@@ -16,5 +16,8 @@ class Service:
         self.status = status
 
     def __str__(self):
-        return f"[{self.service_id}] {self.name} ({self.category}) - {self.price:,} VNĐ | Trạng thái: {self.status}"
+        return (f"[{self.service_id}] "
+                f"{self.name} "
+                f"({self.category}) "
+                f"- {self.price:,} VNĐ | Trạng thái: {self.status}")
 
