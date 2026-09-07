@@ -15,7 +15,7 @@ class Person(ABC):
 
     @name.setter
     def name(self, value):
-        if not value.strip():
+        while not value.strip():
             raise ValueError("Tên không được để trống")
         self._name = value.strip()
 
@@ -25,7 +25,7 @@ class Person(ABC):
 
     @email.setter
     def email(self, value):
-        if "@" not in value.strip():
+        while "@" not in value.strip():
             raise ValueError("Email phải chứa @")
         self._email = value.strip()
 
