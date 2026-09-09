@@ -1,4 +1,4 @@
-from Person import Person
+from app.model.Person import Person
 
 class Member(Person):
     def __init__(self, name, email, phone, birth, member_id, is_activate=True):
@@ -19,7 +19,16 @@ class Member(Person):
     def add_workout(self,workout):
          self._workouts.append(workout)
 
-
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            data['name'],
+            data['email'],
+            data['phone'],
+            data['birth'],
+            data['member_id'],
+            data['is_activate']
+        )
 
 
 
