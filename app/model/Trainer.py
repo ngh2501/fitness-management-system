@@ -1,5 +1,4 @@
-from Person import Person
-
+from app.model.person import Person
 class Trainer(Person):
     def __init__(self, name, email, phone, birth,
                  trainer_id, specialty,
