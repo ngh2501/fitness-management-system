@@ -17,3 +17,15 @@ class Trainer(Person):
 
     def get_member_count(self):
         return len(self.assigned_member)
+
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            data["name"],
+            data["email"],
+            data["phone"],
+            data["birth"],
+            data["trainer_id"],
+            data["specialty"],
+            data["experience__year"]
+        )
