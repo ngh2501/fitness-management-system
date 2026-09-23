@@ -16,3 +16,23 @@ class Workout:
             "volumn": sets * reps * weight
         }
         self._exercises.append(exercise_data)
+
+    def to_dict(self):
+        return {
+            "workout_id": self._workout_id,
+            "member_id": self._member_id,
+            "date": self._date,
+            "exercises": self._exercises
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        workout = cls(
+            data["workout_id"],
+            data["member_id"],
+            data["date"]
+        )
+
+        workout._exercises = data["exercises"]
+
+        return workout
