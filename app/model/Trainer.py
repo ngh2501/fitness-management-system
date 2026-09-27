@@ -29,3 +29,26 @@ class Trainer(Person):
             data["specialty"],
             data["experience__year"]
         )
+
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "email": self.email,
+            "phone": self._phone,
+            "birth": self._birth,
+            "trainer_id": self.trainer_id,
+            "specialty": self.specialty,
+            "experience__year": self.experience__year
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            data["name"],
+            data["email"],
+            data["phone"],
+            data["birth"],
+            data["trainer_id"],
+            data["specialty"],
+            data["experience__year"]
+        )

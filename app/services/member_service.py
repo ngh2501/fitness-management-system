@@ -22,8 +22,10 @@ class MemberService:
 
     def list_active_members(self):
         members = self.member_repository.get_all()
-        member_active = []
+        active_members = []
+
         for member in members:
-            if member.is_active:
-                member_active.append(member)
-        return member_active
+            if member.is_activate:
+                active_members.append(member)
+
+        return active_members

@@ -5,7 +5,7 @@ class Member(Person):
         super().__init__(name, email, phone, birth)
         self.member_id = member_id
         self.is_activate = is_activate
-        self._workouts = []
+        self._workout_history = []
 
     def __str__(self):
         return f"Member: {self.name} ({self.email})"
@@ -20,7 +20,7 @@ class Member(Person):
         self.is_activate = False
 
     def add_workout(self, workout):
-        self._workouts.append(workout)
+        self._workout_history.append(workout)
 
     def to_dict(self):
         return {

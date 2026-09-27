@@ -1,11 +1,25 @@
-
-
 class Workout:
-    def __init__(self, workout_id, _member_id, _date):
+    def __init__(self, workout_id, member_id, date):
         self._workout_id = workout_id
-        self._member_id = _member_id
-        self._date = _date
+        self._member_id = member_id
+        self._date = date
         self._exercises = []
+
+    @property
+    def date(self):
+        return self._date
+
+    @property
+    def exercises(self):
+        return self._exercises
+
+    @property
+    def workout_id(self):
+        return self._workout_id
+
+    @property
+    def member_id(self):
+        return self._member_id
 
     def add_exercise(self, exercise, sets, reps, weight):
         exercise_data = {
@@ -13,8 +27,9 @@ class Workout:
             "sets": sets,
             "reps": reps,
             "weight": weight,
-            "volumn": sets * reps * weight
+            "volume": sets * reps * weight
         }
+
         self._exercises.append(exercise_data)
 
     def to_dict(self):

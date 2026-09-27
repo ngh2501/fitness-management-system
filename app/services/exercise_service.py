@@ -1,13 +1,11 @@
-from app.repositories.exercise_repository import ExerciseRepository
-
 
 class ExerciseService:
 
-    def __init__(self):
-        self.repository = ExerciseRepository()
+    def __init__(self, exercise_repository):
+        self.exercise_repository = exercise_repository
 
     def add_exercise(self, exercise):
-        self.repository.add(exercise)
+        return self.exercise_repository.add(exercise)
 
-    def get_all_exercises(self):
-        return self.repository.get_all()
+    def list_exercises(self):
+        return self.exercise_repository.get_all()

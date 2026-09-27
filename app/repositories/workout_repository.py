@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from app.model.workouts import Workout
+from app.model.workout import Workout
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 

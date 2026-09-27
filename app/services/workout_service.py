@@ -1,13 +1,10 @@
-from app.repositories.workout_repository import WorkoutRepository
-
-
 class WorkoutService:
 
-    def __init__(self):
-        self.repository = WorkoutRepository()
+    def __init__(self, workout_repository):
+        self.workout_repository = workout_repository
 
     def add_workout(self, workout):
-        self.repository.add(workout)
+        return self.workout_repository.add(workout)
 
-    def get_all_workouts(self):
-        return self.repository.get_all()
+    def list_workouts(self):
+        return self.workout_repository.get_all()

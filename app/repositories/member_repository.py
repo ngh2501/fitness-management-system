@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 class MemberRepository:
 
     def __init__(self):
-        self.file_path = BASE_DIR / "data" / "trainers.json"
+        self.file_path = BASE_DIR / "data" / "members.json"
 
     def _load(self):
         with open(self.file_path, "r", encoding="utf-8") as jsonfile:
